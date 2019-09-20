@@ -74,12 +74,12 @@ export default class Card extends Component{
             left: this.props.chars.pos.x,
             transition: 'all 0.7s ease-in-out'
           };
-        
+        console.log('chaaars',this.props.chars.data[0].card_images[0].image_url);
         return(
 
                 <div className={this.props.chars.pos.box} style={divStyle}>
                     
-                    <Img src={['http://52.57.88.137/api/card_image/'+this.props.chars.name]}
+                    <Img src={[this.props.chars.data[0].card_images[0].image_url]}
                         className={this.state.status}
                         onMouseEnter = {(e) => this.showCardEN(e)} 
                         onMouseLeave = {(e) => this.showCardLE(e)}

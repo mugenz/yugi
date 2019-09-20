@@ -27,29 +27,30 @@ componentDidMount(){
         'Infernoid Patrulea','Infernoid Pirmais','Infernoid Seitsemas','Lyla, Lightsworn Sorceress','Monster Gate',
         'One for One','Raiden, Hand of the Lightsworn','Reasoning','Time-Space Trap Hole','Torrential Tribute','Upstart Goblin','Void Seer'];
 
-    let url = 'http://52.57.88.137/api/card_data/';
+    let url = 'https://db.ygoprodeck.com/api/v5/cardinfo.php?name=';
     let cards = [];
     //let tempo = [];
     
 
-    cardNames.forEach (card =>(
+cardNames.forEach (card =>(
     axios.get(url + card)
     .then(res => { 
-    res.data.data.filtered = false
-    res.data.data.show = false
-    res.data.data.freeze = false
-    res.data.data.pos = {
+    //console.log('res :', res);
+    res.filtered = false
+    res.show = false
+    res.freeze = false
+    res.pos = {
         x: this.minMax(0, 700), 
         y: this.minMax(20, 700),
         rot: this.minMax(-40, 40),
         size: 150,
         box: 'myBox',
         filtered: 'block'}
-    cards.push(res.data.data);
-    //console.log(res.data.data.name)
+    cards.push(res);
+    //console.log(res)
     })
 ))
-console.log(cards)
+//console.log('cards',cards)
 this.buildCardList(cards) 
 
 }     
