@@ -1,0 +1,79 @@
+
+.CardTable {
+  background: #666 url(https://s.cdpn.io/44759/Wood-Backgrounds-Picture.jpg) no-repeat top center;
+  width : 100vw;
+  height : 100vh;
+}
+
+.not-selected {
+  width : 150px;
+  transition: all 0.5s ease-out;
+}
+.selected {
+  width : 250px;
+  transition: all 0.3s ease-in;
+  z-index: 100;
+}
+.show{
+  width : 350px;
+  transition: all 0.7s ease-in;
+  z-index: 1000;
+}
+
+.myBox {
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+}
+.myBoxSel {
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+}
+.myBoxShow {
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+}
+.Info{
+  background: rgb(209, 193, 193);
+  opacity: 0.8;
+  border: 1px solid #999;
+  border-radius: 3px;
+  height: auto;
+  position: fixed;
+  width: 500px;
+  top: 10px;
+  left: 370px;
+}
+.theTitle{
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: rgb(102, 22, 22);
+  color: ivory;
+}
+
+.btnField{
+  z-index: 1100;
+  float:'left';
+  width:100px;
+}
+.selField{
+  z-index: 1100;
+  float:'left';
+  width:200px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
